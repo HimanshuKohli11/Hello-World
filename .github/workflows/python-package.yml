@@ -19,7 +19,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        python-version: [3.5]
+        python-version: [3.5, 3.6]
 
     steps:
     - uses: actions/checkout@v2
@@ -42,13 +42,14 @@ jobs:
       uses: fylein/python-pylint-github-action@master
       with:
         args: pylint --help
-    - name: Lint with black
-      run: |
-        pip install black
-        black .
+    
 #   - name: Test with pylint
 #     run: |
 #       pylint .
 #    - name: Test with pytest
 #      run: |
 #        pytest
+#    - name: Lint with black
+#      run: |
+#        pip install black
+#        black .

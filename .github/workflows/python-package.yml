@@ -7,11 +7,11 @@ on:
   push:
     branches: 
       - master
-      - develop
+      - oct-test_branch1
   pull_request:
     branches: 
       - master
-      - develop
+      - oct-test_branch1
 
 jobs:
   build:
